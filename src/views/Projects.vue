@@ -1,140 +1,51 @@
 <template>
 <div id="cardz">
-
-    <div class="flip-card">
+<div id="pro">
+    <h1 class="testimonials-heading">
+        projects
+    </h1>
+    <div class="flip-card" v-for="proj in projects"
+          :key="proj.id">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">BMI Calculator</h1> 
-                <p class="wording">In this project, I've created a BMI Calculator where it indicates fatness in your body.</p> 
-                <p class="wording">HTML, CSS, JS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://rococo-mermaid-22bb49.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/chocomelo24/portfolio.git" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/1zCJkVhC/Screenshot-2022-07-20-093818.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">Temperature Converter</h1> 
-                <p class="wording">In this project, I've created a Temperature Converter where you can see what degrees it is in Fahrenheit or Celsius.</p> 
-                <p class="wording">HTML, CSS, JS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://courageous-dodol-ba926c.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/Temp_Convert" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
+              <img
+              class="img-fluid rounded border border-5 border-dark"
+              v-bind:src="proj.imgURL"
+              id="testpic"
+              />
+          </div>
+        <div class="flip-card-back">
+            <h5>{{ proj.Title }}</h5>
+            <p>{{ proj.description }}</p>
+            <p>{{ proj.TechStack }}</p>
+            <p>{{ proj.imgURL }}</p>
+            <a class="link_btn1" :href="proj.github" target="blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a class="link_btn2" :href="proj.netlify" target="blank">
+                <i class="fa-solid fa-eye"></i>
+            </a>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/L5y7vQ4X/Screenshot-2022-07-20-093654.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">Mock Portfolio</h1> 
-                <p class="wording">In this project, I've created a mock portfolio.</p> 
-                <p class="wording">HTML, CSS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://camerons-portfolio.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/A_Portfolio" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/DzsgmjtG/Screenshot-2022-07-20-093352.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">Mock Portfolio2</h1> 
-                <p class="wording">In this project, I've created a mock portfolio as well.</p> 
-                <p class="wording">HTML, CSS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://cameron-portfolio.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/Portfolio2" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
         </div>
-    </div>
 
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/857ThvmL/Screenshot-2022-07-20-093224.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">Calculator</h1> 
-                <p class="wording">In this project, I've created a fully functional calculator.</p> 
-                <p class="wording">HTML, CSS, JS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://scintillating-conkies-e99358.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/calculator" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/PJNTQwbm/Screenshot-2022-07-20-093123.png" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wording">To-Do List</h1> 
-                <p class="wording">In this project, I've created a To-Do List where you can add things you still need to do, or tick a task you completed.</p> 
-                <p class="wording">HTML, CSS, JS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://extraordinary-swan-d588eb.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/ToDoList" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="https://i.postimg.cc/3xNJFzBs/istockphoto-1319269543-170667a.jpg" alt="Avatar" style="width:300px;height:300px;">
-            </div>
-            <div class="flip-card-back">
-                <h1 class="wordingfr">Real Estate</h1> 
-                <p class="wording">In this project, I've created a website where it displays different types of properties.</p> 
-                <p class="wording">HTML, CSS, JS</p>
-                <div class="project_btn d-flex justify-content-center">
-                    <a href="https://serene-moxie-ee4fdf.netlify.app/" target="_blank"><button class="wording">Live</button></a>
-                    <a href="https://github.com/Camie0903/Property" target="_blank"><button class="wording">Github</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+  </div>
 </div>
             
 </template>
 <script>
 export default {
-    name: "Projects",
-}
-
-const projects= [
+    data(){
+      return {
+        projects:[
         {
             id: 1,
             Title: "BMI Calculator",
             description:"In this project, I've created a BMI Calculator where it indicates fatness in your body.",
             TechStack: "HTML, CSS, JS",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            imgURL: "https://i.postimg.cc/pLShfMx0/bmi.jpg",
             Github: "https://github.com/Camie0903/BMI_CALC",
             Live: "https://rococo-mermaid-22bb49.netlify.app/"
         },
@@ -144,23 +55,23 @@ const projects= [
             Title: "Temperature Converter",
             description:"In this project, I've created a Temperature Converter where you can see what degrees it is in Fahrenheit or Celsius.",
             TechStack: "HTML, CSS, JS",            
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            imgURL: "https://i.postimg.cc/7YVSTRfc/tc.jpg",
             Github: "https://github.com/Camie0903/Temp_Convert",
             Live: "https://courageous-dodol-ba926c.netlify.app/"
         },
         {
             id: 4,
             Title: "Mock Portfolio",
-            description:"In this project, I've created a mock portfolio as well.",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            description:"In this project, I've created a mock portfolio.",
+            imgURL: "https://i.postimg.cc/QMn2NSQK/Screenshot-2022-07-20-093352.png",
             Github: "https://github.com/Camie0903/A_Portfolio",
             Live: "https://camerons-portfolio.netlify.app/"
         },
         {
             id: 3,
             Title: "Mock Portfolio2",
-            description:"In this project, I've created a mock portfolio.",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            description:"In this project, I've created a mock portfolio as well.",
+            imgURL: "https://i.postimg.cc/PryTsWRY/Screenshot-2022-07-20-093654.png",
             Github: "https://github.com/Camie0903/Portfolio2",
             Live: "https://cameron-portfolio.netlify.app/"
         },
@@ -168,7 +79,7 @@ const projects= [
             id: 5,
             Title: "Calculator",
             description:"In this project, I've created a fully functional calculator.",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            imgURL: "https://i.postimg.cc/rFL94Wgd/cal.jpg",
             Github: "https://github.com/Camie0903/calculator",
             Live: "https://scintillating-conkies-e99358.netlify.app/"
         },
@@ -176,7 +87,7 @@ const projects= [
             id: 6,
             Title: "To-Do List",
             description:"In this project, I've created a To-Do List where you can add things you still need to do, or tick a task you completed.",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            imgURL: "https://i.postimg.cc/tgy3ZHzL/istockphoto-1285308242-170667a.jpg",
             Github: "https://github.com/Camie0903/ToDoList",
             Live: "https://extraordinary-swan-d588eb.netlify.app/"
         },
@@ -184,12 +95,15 @@ const projects= [
             id: 7,
             Title: "Real Estate",
             description:"In this project, I've created a website where it displays different types of properties.",
-            imgURL: "https://i.postimg.cc/KzNt0v1Z/Screenshot-2022-07-19-114233.png",
+            imgURL: "https://i.postimg.cc/x8BypNVZ/rs.jpg",
             Github: "https://github.com/Camie0903/Property",
             Live: "https://serene-moxie-ee4fdf.netlify.app/"
         }
 
-    ]
+    ]}
+}
+}
+
 
 </script>
 <style>
@@ -216,6 +130,7 @@ const projects= [
     flex-direction: column;
     border-radius: 50%;
     float: left;
+    margin:2%;
   /* flex-wrap: wrap; */
 }
 
@@ -241,15 +156,28 @@ const projects= [
   backface-visibility: hidden;
   
 }
-
+.link_btn1{
+    margin-right: 35%;
+ 
+}
 .flip-card-front {
     background-color: #bbb;
   color: black;
+  height:300px;
+  width:300px;
+}
+.flip-card-front img {
+ 
+  height:300px;
+  width:300px;
+  object-fit: cover;
 }
 
 .flip-card-back {
   background-color: #2c3e50;
   color: white;
   transform: rotateY(180deg);
+ font-size: small;
+ margin: 5%;
 }
 </style>
