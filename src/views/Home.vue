@@ -4,7 +4,7 @@
     <div id="about">
       <h1>
         <div class="heading1" style='float:left; margin-bottom:20px;  color: #2c3e50;'>
-          Cameron Tamboer
+          <h2>I am <span ref="textContainer"></span></h2>
         </div>
         <div class="stage">
           <div class="pyramid3d">
@@ -15,9 +15,7 @@
           </div>
         </div> 
       </h1>
-      <h3 style='clear:both' class="subhead">
-        <a href="https://github.com/Camie0903" target="_blank">Cameron</a> is an aspiring full stack web developer, residing in Cape Town, South Africa.
-      </h3>
+      
     
     </div>
   </div>
@@ -25,7 +23,56 @@
 </template>
 <script>
 export default {
-    
+    data() {
+    return {
+      text: [
+    "Cameron Tamboer",
+    "a passionate aspiring web developer ",
+    "residing in Cape Town, South Africa."
+ 
+      ],
+    };
+  },
+  methods: {
+    waitForMs(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    },
+    async typeSentence(sentence, delay = 100) {
+      let letters = sentence.split("");
+      let i = 0;
+      while (i < letters.length) {
+        await this.waitForMs(delay);
+        this.$refs.textContainer.append(letters[i]);
+        i++;
+      }
+    },
+    async deleteSentence() {
+      let sentence = this.$refs.textContainer.innerHTML;
+      let letters = sentence.split("");
+      while (letters.length > 0) {
+        await this.waitForMs(100);
+        letters.pop();
+        this.$refs.textContainer.innerHTML = letters.join("");
+      }
+    },
+    async sentenceLoop(sentenceList) {
+      let i = 0;
+      let t = true;
+      while (t) {
+        await this.typeSentence(sentenceList[i]);
+        await this.waitForMs(1500);
+        await this.deleteSentence();
+        await this.waitForMs(500);
+        i++;
+        if (i >= sentenceList.length) {
+          i = 0;
+        }
+      }
+    },
+  },
+  async mounted() {
+    this.sentenceLoop(this.text);
+  },
 }
 </script>
 <style>
@@ -44,34 +91,37 @@ body {
     color: #eee;
     color: rgba(255,255,255,.85);
 }
-#container { 
+/* #container { 
     padding-top: 50px;
-}
+} */
 
-.subhead {
+/* .subhead {
     color: #2c3e50;
     overflow: hidden;
     white-space: nowrap;
     word-wrap: break-word;
     font-weight: 100;
     animation: typing 5s steps(100, end) 1;
-}
+} */
 
-@keyframes typing {
+/* @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-}
+} */
 
 #content {
     max-width: 43em;
     padding:10px;
     margin: 0 auto;
+    font-size:medium;
+
 }
 h1 {
     font-size: 3.7em;
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
+    margin-top: -3%;
 }
 h3 {
     font-size: 2.4em;
@@ -100,6 +150,8 @@ p#pright {
 ul {
     clear:both;
 }
+
+
 
 
 html { font-size: 62.5%; }
