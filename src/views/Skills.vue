@@ -2,91 +2,94 @@
 <div class="sk_head">
     <h1>Skills</h1>
 </div>
-<div id="skills_cont">
-    <div id="skills_icons">
-        <div class="i1">
-            <i class="fa-brands fa-html5"></i>
-            
-        </div>
-        <div class="i2">
-            <i class="fa-brands fa-css3-alt"></i>
-        </div>
-        <div class="i3">
-            <i class="fa-brands fa-bootstrap"></i>
-        </div>
-        <div class="i4">
-            <i class="fa-brands fa-js-square"></i>
-        </div>
-        <div class="i5">
-            <i class="fa-brands fa-vuejs"></i>
-        </div>
-        <div class="i6">
-            <i class="fa-brands fa-node-js"></i>
-        </div>
-    </div>
-<!-- Skills Bar -->
-    <div id="skill_bar">
-        <div class="skills">
-            <div class="details">
-                <span>HTML</span>
-                <span>90%</span>
-            </div>
-            <div class="bar">
-            <div id="html-bar"></div>
-            </div>
-        </div>
+<div class="row">
 
-        <div class="skills">
-            <div class="details">
-                <span>CSS</span>
-                <span>80%</span>
+    <div id="skills_cont" class="row mb-5">
+        <div id="skills_icons" class="col-md-6">
+            <div class="i1">
+                <i class="fa-brands fa-html5"></i>
+                
             </div>
-            <div class="bar">
-            <div id="css-bar"></div>
+            <div class="i2">
+                <i class="fa-brands fa-css3-alt"></i>
             </div>
-        </div>
-
-        <div class="skills">
-            <div class="details">
-                <span>BOOTSTRAP</span>
-                <span>75%</span>
+            <div class="i3">
+                <i class="fa-brands fa-bootstrap"></i>
             </div>
-            <div class="bar">
-            <div id="bootstrap-bar"></div>
+            <div class="i4">
+                <i class="fa-brands fa-js-square"></i>
             </div>
-        </div>
-
-        <div class="skills">
-            <div class="details">
-                <span>JS</span>
-                <span>78%</span>
+            <div class="i5">
+                <i class="fa-brands fa-vuejs"></i>
             </div>
-            <div class="bar">
-            <div id="js-bar"></div>
+            <div class="i6">
+                <i class="fa-brands fa-node-js"></i>
             </div>
         </div>
-
-        <div class="skills">
-            <div class="details">
-                <span>VUE</span>
-                <span>20%</span>
+    <!-- Skills Bar -->
+        <div id="skill_bar" class="col-md-6">
+            <div class="skills">
+                <div class="details">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+                <div class="bar">
+                <div id="html-bar"></div>
+                </div>
             </div>
-            <div class="bar">
-            <div id="vue-bar"></div>
+    
+            <div class="skills">
+                <div class="details">
+                    <span>CSS</span>
+                    <span>80%</span>
+                </div>
+                <div class="bar">
+                <div id="css-bar"></div>
+                </div>
             </div>
+    
+            <div class="skills">
+                <div class="details">
+                    <span>BOOTSTRAP</span>
+                    <span>75%</span>
+                </div>
+                <div class="bar">
+                <div id="bootstrap-bar"></div>
+                </div>
+            </div>
+    
+            <div class="skills">
+                <div class="details">
+                    <span>JS</span>
+                    <span>78%</span>
+                </div>
+                <div class="bar">
+                <div id="js-bar"></div>
+                </div>
+            </div>
+    
+            <div class="skills">
+                <div class="details">
+                    <span>VUE</span>
+                    <span>20%</span>
+                </div>
+                <div class="bar">
+                <div id="vue-bar"></div>
+                </div>
+            </div>
+    
+            <div class="skills">
+                <div class="details">
+                    <span>NODE</span>
+                    <span>2%</span>
+                </div>
+                <div class="bar">
+                <div id="node-bar"></div>
+                </div>
+            </div>
+    
         </div>
-
-        <div class="skills">
-            <div class="details">
-                <span>NODE</span>
-                <span>2%</span>
-            </div>
-            <div class="bar">
-            <div id="node-bar"></div>
-            </div>
-        </div>
-
-    </div>
+</div>
 </div>    
 </template>
 <script>
@@ -94,9 +97,9 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 .sk_head{
-    margin-top:-13%;
+    margin-top:13vh;
     font-size: 2rem;
     letter-spacing: 3px;
     color: #2c3e50;

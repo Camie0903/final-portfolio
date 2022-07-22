@@ -91,9 +91,12 @@ body {
     color: #eee;
     color: rgba(255,255,255,.85);
 }
-/* #container { 
-    padding-top: 50px;
-} */
+#container { 
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 
 /* .subhead {
     color: #2c3e50;
@@ -112,7 +115,8 @@ body {
 #content {
     max-width: 43em;
     padding:10px;
-    margin: 0 auto;
+    margin:auto;
+    
     font-size:medium;
 
 }
@@ -165,7 +169,7 @@ body { font-size: 1em;}
   margin-right:0px;
   margin-top:30px;
   width:0px; height:0px;
-  
+  margin-bottom: vh;
   position:relative;  
   -webkit-perspective:1200px;
   -webkit-perspective-origin:50% 50%;

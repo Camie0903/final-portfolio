@@ -95,7 +95,7 @@ h1 {
   font-size: 2.4em;
 }
 #timeline-content {
-  margin-top: 50px;
+  margin-top: 30vh;
   text-align: center;
 }
 /* Timeline */

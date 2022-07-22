@@ -2,16 +2,16 @@
     <div class="Ab_head">
        <h1>About me</h1>
     </div>
-    <div class="row">
-      <div class="column">
-        <div class="img_abt">
+    <div class="row mb-5">
+      <div class="column row d-flex">
+        <div class="col-md-6 img_abt d-flex justify-content-center">
           <img
                   class="img-fluid"
                   id="ap"
                   src="https://i.postimg.cc/PJm8KQZF/Cameron-1.jpg"
                 />
         </div>
-        <div class="abt_para1">
+        <div class="col-md-6  abt_para1 text-center">
           <p class="fir_para"> I am a South African freelance full stack developer. I am passionate about creating and maintaining websites, I have all the experience needed to create a responsive website. 
           I've spent 2 years in the coding industry, I found my passion through working with the coding language HTML and today i can say that I have learnt much more and I find coding much more intriguing, 
           everyday is something new to learn. All that I am and all I can do was all through practice.</p>
@@ -31,9 +31,10 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 .Ab_head{
-  margin-top: -13%;
+ margin-top: 5vh;
+ margin-bottom:14vh ;
   font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 3px;
@@ -70,12 +71,13 @@ export default {
   margin-top:5%;
 }
 .abt_para1{
+
   display: flex;
   flex-wrap: wrap; 
-  margin-left: 50%;
+ /* width:100%; */
   /* margin-top: 50%; */
   margin-top: 6%;
-  margin-right: 10%;
+
   /* float: right; */
 }
 /* .abt_para2{

@@ -71,7 +71,7 @@ export default {
 </script>
 <style scoped>
 .he{
-  margin-top: -13%;
+ margin-top: 20vh;
   position: relative;
   z-index: 100;
    font-size: 2rem;

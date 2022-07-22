@@ -60,6 +60,7 @@ body {
 .contact-box {
   width: clamp(100px, 90%, 1000px);
   margin: 80px 50px;
+  margin-top: 30vh;
   display: flex;
   flex-wrap: wrap;
   margin-left: 15%;
