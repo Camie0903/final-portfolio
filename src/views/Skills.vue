@@ -1,11 +1,12 @@
 <template>
-<div>
+<div class="sk_head">
     <h1>Skills</h1>
 </div>
 <div id="skills_cont">
     <div id="skills_icons">
         <div class="i1">
             <i class="fa-brands fa-html5"></i>
+            
         </div>
         <div class="i2">
             <i class="fa-brands fa-css3-alt"></i>
@@ -94,6 +95,31 @@ export default {
 }
 </script>
 <style>
+.sk_head{
+    margin-top:-13%;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
+    line-height: 0.9em;
+    outline: none;
+    animation: animate 6000000s linear infinite;
+}
+@keyframes animate {
+  100% {
+    color: #2c3e50;
+    text-shadow: none;
+  }
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
+      0 0 80px #03BCF4, 0 0 160px #03BCF4;
+ 
+}
+}
 #skills_cont{
     display:flex;
     justify-content: space-around;
@@ -102,7 +128,25 @@ export default {
     font-size:5rem;
     display:flex;
     flex-wrap: wrap;
-    
+    gap: 2rem;
+}
+.i1{
+    margin:5%;
+}
+.i2{
+    margin:5%;
+}
+.i3{
+    margin:5%;
+}
+.i4{
+    margin:5%;
+}
+.i5{
+    margin:5%;
+}
+.i6{
+    margin:5%;
 }
 .details{
     width: 100%;
@@ -113,12 +157,13 @@ export default {
 /* #skill_bar{
     justify-content: stretch;
 } */
+#skill_bar{
+    width: 600px;
+}
 .bar{
-    position: relative;
-
-    border: 2px solid #0d96e0;
-
-    border-radius: 20px;
+    /* position: relative; */
+    /* border-radius: 20px; */
+    width:100%;
 
 }
 .bar div{

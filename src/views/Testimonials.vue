@@ -1,4 +1,7 @@
 <template>
+<div class="he">
+  <h1>Testimonials</h1>
+</div>
   <div class="items">
     <div class="entry" v-for="t of testimonials" :key="t.id">
       <p class="name">{{t.name}}</p>
@@ -44,15 +47,15 @@ export default {
         },
         {
             id: 6,
-            imgUrl:"https://i.postimg.cc/d1J59TKB/jason.jpg",
-            name: "Jason Wandrag",
-            testi:"Cameron has shown great potential with her work in web development. She strives to do her best and I am certain that she will continue to learn and grow as a software developer."
+            imgUrl:"https://i.postimg.cc/XqjVKwW4/Siyolise-1.jpg",
+            name: "Siyolise Mekuto",
+            testi:"Cameron is a delightful person to work with. She is always proving herself when it comes to coding and very reliable."
         },
         {
             id: 7,
-            imgUrl:"https://i.postimg.cc/YqLJXVPy/Sunethia-1.jpg",
-            name: "Sunethia Lawrence",
-            testi:"Cameron is a loyal, hardworking and commited young lady, who takes her work serious and makes sure she achieve her goals. It's always a pleasure working because of the positive vibe she has."
+            imgUrl:"https://i.postimg.cc/1R8HrbWn/homepic.jpg",
+            name: "Jesse Spence",
+            testi:"Cameron is a reliable work colleague to have, you can always count on her to complete what is needed. This along with her great energy and easy going personality makes her an absolute asset to have in any work environment."
         },
         {
             id: 8,
@@ -67,9 +70,37 @@ export default {
 
 </script>
 <style scoped>
+.he{
+  margin-top: -13%;
+  position: relative;
+  z-index: 100;
+   font-size: 2rem;
+  letter-spacing: 3px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
+  line-height: 0.9em;
+  outline: none;
+  animation: animate 6000000s linear infinite;
+}
+@keyframes animate {
+  100% {
+    color: #2c3e50;
+    text-shadow: none;
+  }
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
+      0 0 80px #03BCF4, 0 0 160px #03BCF4;
+ 
+}
+}
     h1 {
   text-align: center;
   margin: 1.5em;
+  margin-top: -10%;
 }
 
 img {
@@ -107,7 +138,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   .items {
-    animation: carouselAnim 80s infinite alternate linear;
+    animation: carouselAnim 100s infinite alternate linear;
   }
   
   @keyframes carouselAnim {
@@ -122,7 +153,7 @@ img {
 @media screen and (max-width: 400px) {
   .items {
     /* animation: none; */
-    animation: carouselAnim2 80s infinite alternate linear;
+    animation: carouselAnim2 100s infinite alternate linear;
     flex-direction: column;
   }
   @keyframes carouselAnim2 {

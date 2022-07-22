@@ -1,7 +1,8 @@
 <template>
     <div id="timeline-content">
-  <h1>Timeline</h1>
-
+  <div class="res_head">
+    <h1>Resume</h1>
+  </div>
   <ul class="timeline">
     <li class="event" data-date="2015-2020">
       <h3>Voortrekker High School</h3>
@@ -10,7 +11,13 @@
     <li class="event" data-date="2021">
       <h3>CartRun</h3>
       <p>I was an instore shopper for people that couldn't make it to go to shops during COVID19.</p>    
-    </li>  
+    </li> 
+     <li class="event" data-date="2021">
+      
+      <h3>CTU Training Solutions</h3>
+      
+      <p>At CTU Training Solutions I studied Information Systems for a year. </p>
+    </li> 
     <li class="event" data-date="2022">
       
       <h3>Life Choices Academy</h3>
@@ -26,9 +33,32 @@ export default {
 }
 </script>
 <style scoped>
+
+.res_head{
+  margin-top: -13%;
+   font-size: 2rem;
+  letter-spacing: 3px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
+  line-height: 0.9em;
+  outline: none;
+  animation: animate 6000000s linear infinite;
+}
+@keyframes animate {
+  100% {
+    color: #2c3e50;
+    text-shadow: none;
+  }
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
+      0 0 80px #03BCF4, 0 0 160px #03BCF4;
  
-/* Variables */
-/* Base */
+}
+}
 body {
   background: #252827;
   font-size: 16px;

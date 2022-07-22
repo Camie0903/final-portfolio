@@ -1,9 +1,11 @@
 <template>
 <div id="cardz">
 <div id="pro">
+  <div class="pro_head">
     <h1 class="testimonials-heading">
-        projects
+        Projects
     </h1>
+  </div>  
     <div class="flip-card" v-for="proj in projects"
           :key="proj.id">
         <div class="flip-card-inner">
@@ -15,10 +17,10 @@
               />
           </div>
         <div class="flip-card-back">
-            <h5>{{ proj.Title }}</h5>
+            <h5 class="proj_tit">{{ proj.Title }}</h5>
             <p>{{ proj.description }}</p>
             <p>{{ proj.TechStack }}</p>
-            <p>{{ proj.imgURL }}</p>
+            <!-- <p>{{ proj.imgURL }}</p> -->
             <a class="link_btn1" :href="proj.github" target="blank">
                 <i class="fa-brands fa-github"></i>
             </a>
@@ -107,6 +109,31 @@ export default {
 
 </script>
 <style>
+.pro_head{
+  margin-top: -11%;
+   font-size: 2rem;
+  letter-spacing: 3px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
+  line-height: 0.9em;
+  outline: none;
+  animation: animate 6000000s linear infinite;
+}
+@keyframes animate {
+  100% {
+    color: #2c3e50;
+    text-shadow: none;
+  }
+  0% {
+    color: #fff;
+    text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
+      0 0 80px #03BCF4, 0 0 160px #03BCF4;
+ 
+}
+}
 #cardz{
     display: flex;
     flex-wrap: wrap;
@@ -114,6 +141,9 @@ export default {
 }
 /* .card-body {
     } */
+.proj_tit{
+  margin-top:15%;
+}
 .wordingfr{
     font-size: medium;
 }
@@ -178,6 +208,6 @@ export default {
   color: white;
   transform: rotateY(180deg);
  font-size: small;
- margin: 5%;
+ margin-top: 5%;
 }
 </style>

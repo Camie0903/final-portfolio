@@ -35,7 +35,9 @@ export default {
 <style>
     *{
         /* background-color: black; */
-        
+        margin-top:-1%;
+        margin-bottom: 5%;
+        /* width: 100%; */
     }
     a {
   color: #6c6d6d;
@@ -61,6 +63,7 @@ a:hover {
         justify-content:end; 
         position: relative;
         z-index: 100;
-        
+        width: 100%;
     }
+  
 </style>
