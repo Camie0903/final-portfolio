@@ -30,7 +30,7 @@
         <div id="skill_bar" class="col-md-6">
             <div class="skills">
                 <div class="details">
-                    <span>HTML</span>
+                    <span>HTMLs</span>
                     <span>90%</span>
                 </div>
                 <div class="bar">
