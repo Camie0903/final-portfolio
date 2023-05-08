@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 <footer>
    <div class="mini-footer">
     <div class="container">
@@ -46,7 +46,7 @@ export default {
  color:#34bfa3
 }
 </style>
-
+ -->
 
 
 

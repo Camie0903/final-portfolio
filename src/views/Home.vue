@@ -1,86 +1,24 @@
 <template>
-    <div id="container">
-  <div id="content">
-    <div id="about">
-      <h1>
-        <div class="heading1" style='float:left; margin-bottom:20px;  color: #2c3e50;'>
-          <h2>I am <span ref="textContainer"></span></h2>
-        </div>
-        <div class="stage">
-          <div class="pyramid3d">
-            <div class="triangle side1"></div>
-            <div class="triangle side2"></div>
-            <div class="triangle side3"></div>
-            <div class="triangle side4"></div>
+  <div id="container">
+    <div id="content">
+      <div id="about">
+        <h1>
+          <div class="heading1" style='float:initial; margin-top:14rem; color: #fff;'>
+            <h2><span ref="text1Container"></span></h2>
+            <h2><span ref="textContainer"></span></h2>
           </div>
-        </div> 
-      </h1>
-      
-    
+        </h1>
+      </div>
     </div>
   </div>
-</div>
 </template>
-<script>
-export default {
-    data() {
-    return {
-      text: [
-    "Cameron Tamboer",
-    "a passionate aspiring web developer ",
-    "residing in Cape Town, South Africa."
- 
-      ],
-    };
-  },
-  methods: {
-    waitForMs(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    },
-    async typeSentence(sentence, delay = 100) {
-      let letters = sentence.split("");
-      let i = 0;
-      while (i < letters.length) {
-        await this.waitForMs(delay);
-        this.$refs.textContainer.append(letters[i]);
-        i++;
-      }
-    },
-    async deleteSentence() {
-      let sentence = this.$refs.textContainer.innerHTML;
-      let letters = sentence.split("");
-      while (letters.length > 0) {
-        await this.waitForMs(100);
-        letters.pop();
-        this.$refs.textContainer.innerHTML = letters.join("");
-      }
-    },
-    async sentenceLoop(sentenceList) {
-      let i = 0;
-      let t = true;
-      while (t) {
-        await this.typeSentence(sentenceList[i]);
-        await this.waitForMs(1500);
-        await this.deleteSentence();
-        await this.waitForMs(500);
-        i++;
-        if (i >= sentenceList.length) {
-          i = 0;
-        }
-      }
-    },
-  },
-  async mounted() {
-    this.sentenceLoop(this.text);
-  },
-}
-</script>
+
 <style>
-    /* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900); */
 body {
-  background-color: #141414;
-  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
-   
+  background-color: #000;
+  /* background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg=='); */
+  background-image:url('https://i.postimg.cc/0Nx8DvrV/Untitled-design-1.png');
+   width: 100vw;
     margin:0; padding:0;
     overflow-x:hidden;
     height:100%;
@@ -91,149 +29,102 @@ body {
     color: #eee;
     color: rgba(255,255,255,.85);
 }
-#container { 
-  height: 100vh;
+.container {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* .subhead {
-    color: #2c3e50;
-    overflow: hidden;
-    white-space: nowrap;
-    word-wrap: break-word;
-    font-weight: 100;
-    animation: typing 5s steps(100, end) 1;
-} */
-
-/* @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-} */
-
-#content {
-    max-width: 43em;
-    padding:10px;
-    margin:auto;
-    
-    font-size:medium;
-
-}
-h1 {
-    font-size: 3.7em;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 0;
-    margin-top: -3%;
-}
-h3 {
-    font-size: 2.4em;
-    font-weight: 300;
-    line-height: 1.5;
-}
-p, li {
-    font-size: 1.7em;
-}
-a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-}
-a:hover {
-    text-decoration: underline;
-}
-p#pleft {
-    max-width:20em;
-    float:left;
-}
-p#pright {
-    max-width:20em;
-    float:left;
-}
-ul {
-    clear:both;
+.typing {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.1em solid #fff;
+  animation: typing 3s steps(40) infinite;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
-
-
-html { font-size: 62.5%; }
-body { font-size: 1em;}
-
-/* PYRAMID CODE */
-.stage {
-  -webkit-transform:scale(1.85);
-  transform:scale(0.85);
-  float:right;
-  margin-right:0px;
-  margin-top:30px;
-  width:0px; height:0px;
-  margin-bottom: vh;
-  position:relative;  
-  -webkit-perspective:1200px;
-  -webkit-perspective-origin:50% 50%;
-  perspective:1200px;
-  perspective-origin:50% 50%;
-}
-.pyramid3d {
-  position:relative;
-  width:150px;
-  height:150px;
-  
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: rotateX(75deg) rotate(65deg);
-  transform: rotateX(75deg) rotate(65deg);
-  -webkit-animation: turnPyramid 10s linear infinite;
-  animation: turnPyramid 10s linear infinite;
-}
-.triangle {
-  -webkit-transform-style:preserve-3d;
-  transform-style:preserve-3d;
-  width:0; height:0;
-  background:none;
-}
-.triangle:before{
-  content:"";
-  position: absolute;
-  height: 0; width: 0;
-  border-style: solid;
-  border-width: 176px 75px 0 75px;
-}
-.side1 { -webkit-transform: translatex(0) rotatey(115.2deg) rotatez(90deg); transform: translatex(0) rotatey(115.2deg) rotatez(90deg); }
-.side2 { -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); }
-.side3 {  -webkit-transform: translatez(0) rotatex(64.8deg); transform: translatez(0) rotatex(64.8deg); }
-.side4 { -webkit-transform: translatey(150px) rotatex(115.2deg); transform: translatey(150px) rotatex(115.2deg); }
-.side1:before{ border-color: rgba(115, 115, 0, 0.3) transparent transparent transparent; }
-.side2:before{ border-color: rgba(20, 90, 225, 0.3) transparent transparent transparent; }
-.side3:before{ border-color: rgba(255,   0, 0, 0.3) transparent transparent transparent; } 
-.side4:before{ border-color: rgba(0, 255, 255, 0.3) transparent transparent transparent; }
-
-
-@-webkit-keyframes turnPyramid { 100% { -webkit-transform: rotateX(75deg) rotate(425deg); } }
-@keyframes turnPyramid { 100% { transform: rotateX(75deg) rotate(425deg); } }
-
-@media (max-width: 300px) {
-    html { font-size: 70%; }
-    .stage { -webkit-transform:scale(0.05); transform:scale(0.05); }
-}
-@media (max-width: 440px) {
-    h1 { line-height:55px; }    
-}
-@media (max-width: 460px) { 
-  .stage { position:absolute; top:25px; left:50%; margin-left:-45px; } 
-  h1 { margin-top:50px; text-align:center; }
-}
-@media (max-width:600px) { .stage { -webkit-transform:scale(0.55); transform:scale(0.55); margin-right:0px; } }
-@media (min-width: 600px) {
-    html { font-size: 80%; }
-    .stage { -webkit-transform:scale(0.68); transform:scale(0.68); margin-right:0px; }
-}
-@media (min-width: 880px) {
-    html { font-size: 120%; }
-    p, li { font-size: 1em; }
-    p#pright { margin-left:3em; }
-    .stage { -webkit-transform:scale(0.85); transform:scale(0.85); margin-right:0px; }
+.word {
+  display: inline-block;
+  padding-right: 0.5em;
 }
 </style>
+
+<script>
+    export default {
+  data() {
+    return {
+      text1: [
+        "Hi :)",
+      ],
+      text: [
+        "My name is Cameron Tamboer",
+        "and I'm an enthusiastic web developer",
+        "with a strong passion for creating engaging and responsive websites.",
+      ],
+    };
+  },
+  methods: {
+    waitForMs(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    },
+    async typeSentence(sentence, containerRef, delay = 100) {
+      let letters = sentence.split("");
+      let i = 0;
+      while (i < letters.length) {
+        await this.waitForMs(delay);
+        containerRef.append(letters[i]);
+        i++;
+      }
+    },
+    async deleteSentence(containerRef) {
+      let sentence = containerRef.innerHTML;
+      let letters = sentence.split("");
+      while (letters.length > 0) {
+        await this.waitForMs(100);
+        letters.pop();
+        containerRef.innerHTML = letters.join("");
+      }
+    },
+    async sentenceLoop(sentenceList1, sentenceList2) {
+      let i = 0;
+      let isSecondListDone = false;
+      while (true) {
+        await this.typeSentence(sentenceList1[i], this.$refs.textContainer);
+        await this.waitForMs(1500); // Pause after sentence is typed
+        await this.deleteSentence(this.$refs.textContainer);
+        await this.waitForMs(500); // Pause after sentence is deleted
+        i++;
+        if (i >= sentenceList1.length) {
+          i = 0;
+          sentenceList1 = sentenceList2;
+          isSecondListDone = true;
+        }
+        if (isSecondListDone && i >= sentenceList2.length) {
+          // Add clickable word after the text array
+          this.$refs.textContainer.innerHTML += '<span class="clickable-word">Click me</span>';
+          const clickableWord = this.$refs.textContainer.querySelector('.clickable-word');
+          clickableWord.addEventListener('click', this.handleClick);
+          break;
+        }
+      }
+    },
+    handleClick() {
+      // Handle click on the clickable word
+      console.log('Clicked!');
+    },
+  },
+  async mounted() {
+    await this.sentenceLoop(this.text1, this.text);
+  },
+}
+
+</script>
