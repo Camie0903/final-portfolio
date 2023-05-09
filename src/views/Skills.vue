@@ -1,7 +1,19 @@
 <template>
-<div class="sk_head">
-    <h1>Skills</h1>
+
+    <!-- <h1 class="heading" data-attr-text="Skills">Skills</h1> -->
+    <div class="patterns">
+  <svg width="40%" height="40%">
+
+              
+     
+    
+   
+ <text x="45%" y="45%"  text-anchor="middle"  >
+   Skills
+ </text>
+ </svg>
 </div>
+
 <div class="row">
 
     <div id="skills_cont" class="row mb-5">
@@ -98,7 +110,8 @@ export default {
 }
 </script>
 <style scoped>
-.sk_head{
+@import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+/* .sk_head{
     margin-top:13vh;
     font-size: 2rem;
     letter-spacing: 3px;
@@ -122,7 +135,106 @@ export default {
       0 0 80px #03BCF4, 0 0 160px #03BCF4;
  
 }
+} */
+body{
+  margin: 0;
+  color: #fff;
+  background-color: #112;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  min-height: 100vh;
 }
+
+
+
+
+svg text {
+  font-family: Lora;
+  letter-spacing: 10px;
+  stroke: #ffa5d8;
+  font-size: 5.5rem;
+  font-weight: 700;
+  stroke-width: 1;
+ 
+  animation: textAnimate 5s infinite alternate;
+  
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%)
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%,0%)
+  }
+  
+}
+.heading {
+  color: #fff;    
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  z-index: 1;
+  margin: 0;
+  font-family: emilys-candy, san-serif;
+  font-size: 5.5rem;
+  font-weight: 100;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 50%;
+    margin-top: 7%;
+}
+
+.heading::before,
+.heading::after {
+  content: attr(data-attr-text);
+  position: absolute;
+  width: 100%;
+  padding: 154px -1rem;
+  z-index: -1;
+  top:0;
+  left: 0;
+}
+
+
+/* Back layer */
+.heading::before {
+  animation: textGhostingBefore 4s ease-out infinite alternate;
+}
+@keyframes textGhostingBefore {
+  0%   {text-shadow: -0.5em -0.5em  0.5em   hsla(0, 0%, 100%, 0.25);}
+  50%  {text-shadow:  0     -0.25em 0.125em hsla(0, 0%, 100%, 0.5);}
+  100% {text-shadow:  0.5em -0.5em  0.5em   hsla(0, 0%, 100%, 0.25);}
+}
+
+/* Middle layer */
+.heading::after {
+  animation: textGhostingAfter 4s ease-in infinite alternate;
+}
+@keyframes textGhostingAfter {
+  0%   {text-shadow: -0.25em -0.25em  0.25em  hsla(0, 0%, 100%, 0.5);}
+  50%  {text-shadow:  0      -0.125em 0.125em hsla(0, 0%, 100%, 0.25);}
+  100% {text-shadow:  0.25em -0.25em  0.25em  hsla(0, 0%, 100%, 0.5);}
+}
+
+/* Front layer */
+.heading {
+  animation: textGhosting 3s ease-in-out infinite alternate;
+}
+@keyframes textGhosting {
+  0%   {color: #fff; text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4, 0 0 80px #03BCF4, 0 0 160px #03BCF4;}
+  50%  {color: #9b59b6; text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 40px #9b59b6, 0 0 80px #9b59b6, 0 0 160px #9b59b6;}
+  100% {color: #2c3e50; text-shadow: none;}
+}
+
 #skills_cont{
     display:flex;
     justify-content: space-around;

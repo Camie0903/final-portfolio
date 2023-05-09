@@ -1,9 +1,17 @@
 <template>
+  
+  
   <div id="container">
+    <div class="background-container">
+<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+</div>
     <div id="content">
       <div id="about">
         <h1>
-          <div class="heading1" style='float:initial; margin-top:14rem; color: #fff;'>
+          <div class="heading1" style="float:initial; margin-top:14rem; color: #fff;">
             <h2><span ref="text1Container"></span></h2>
             <h2><span ref="textContainer"></span></h2>
           </div>
@@ -13,7 +21,110 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+#content{
+  position: relative;
+  z-index: 4;
+}
+.heading1{
+  z-index: 1;
+  float:initial; 
+  margin-top:14rem; 
+  color: #fff
+}
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
+img {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+}
+
 body {
   background-color: #000;
   /* background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg=='); */
@@ -67,8 +178,9 @@ body {
       ],
       text: [
         "My name is Cameron Tamboer",
-        "and I'm an enthusiastic web developer",
-        "with a strong passion for creating engaging and responsive websites.",
+        "I'm an enthusiastic web developer,",
+        "with a strong passion for creating, ", 
+        "maintaining responsive websites.",
       ],
     };
   },
@@ -76,7 +188,7 @@ body {
     waitForMs(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     },
-    async typeSentence(sentence, containerRef, delay = 100) {
+    async typeSentence(sentence, containerRef, delay = 70) {
       let letters = sentence.split("");
       let i = 0;
       while (i < letters.length) {
@@ -89,7 +201,7 @@ body {
       let sentence = containerRef.innerHTML;
       let letters = sentence.split("");
       while (letters.length > 0) {
-        await this.waitForMs(100);
+        await this.waitForMs(80);
         letters.pop();
         containerRef.innerHTML = letters.join("");
       }
@@ -99,9 +211,9 @@ body {
       let isSecondListDone = false;
       while (true) {
         await this.typeSentence(sentenceList1[i], this.$refs.textContainer);
-        await this.waitForMs(1500); // Pause after sentence is typed
+        await this.waitForMs(800); // Pause after sentence is typed
         await this.deleteSentence(this.$refs.textContainer);
-        await this.waitForMs(500); // Pause after sentence is deleted
+        await this.waitForMs(200); // Pause after sentence is deleted
         i++;
         if (i >= sentenceList1.length) {
           i = 0;

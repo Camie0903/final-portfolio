@@ -1,7 +1,7 @@
 <template>
     <div id="timeline-content">
-  <div class="res_head">
-    <h1>Resume</h1>
+  <div class>
+    <h1 data-shadow='Resume'>Resume</h1>
   </div>
   <ul class="timeline">
     <li class="event" data-date="2015-2020">
@@ -24,6 +24,12 @@
       
       <p>At Life Choices I found my strengths and weaknesses in coding, and today I can say it was a very wise and good choice to study at Life Choices.</p>
     </li>
+    <li class="event" data-date="Oct 22-Apr 23">
+      
+      <h3>Webwiser</h3>
+      
+      <p> At WebWiser, a reputable web development company, I had the opportunity to work as a Junior Web Developer on several high-profile projects for well-known brands such as Crocs, Under Armour, and Birkenstock. My role involved working closely with senior developers to create responsive and visually appealing websites that met the clients' requirements.</p>
+    </li>
   </ul>
 </div>
 </template>
@@ -33,10 +39,11 @@ export default {
 }
 </script>
 <style scoped>
+@import url(https://fonts.googleapis.com/css?family=Righteous);
 
-.res_head{
+.res_head {
   margin-top: -13%;
-   font-size: 2rem;
+  font-size: 2rem;
   letter-spacing: 3px;
   color: #2c3e50;
   text-transform: uppercase;
@@ -47,6 +54,7 @@ export default {
   outline: none;
   animation: animate 6000000s linear infinite;
 }
+
 @keyframes animate {
   100% {
     color: #2c3e50;
@@ -56,16 +64,18 @@ export default {
     color: #fff;
     text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
       0 0 80px #03BCF4, 0 0 160px #03BCF4;
- 
+  }
 }
-}
+
 body {
   background: #252827;
   font-size: 16px;
 }
+
 p {
   font-weight: 300;
 }
+
 a {
   color: #6c6d6d;
   text-decoration: none;
@@ -79,23 +89,60 @@ a {
   margin: 1.9rem 0 0 0;
   float: right;
 }
+
 a:hover {
   color: white;
   background: #004ffc;
   border-bottom: 0.35em solid black;
 }
+
 strong {
   font-weight: 600;
 }
+
 h1 {
-  font-family: 'Saira', sans-serif;
   letter-spacing: 1.5px;
   color: white;
   font-weight: 400;
-  font-size: 2.4em;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 5.5rem;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+  margin-left: 26%;
+  position: relative;
 }
+
+h1:after {
+  position: relative;
+  content: attr(data-shadow);
+  top: 0.02em;
+  left: 0.1em;
+  z-index: -1;
+  text-shadow: none;
+  background-image: linear-gradient(
+    45deg,
+    transparent 45%,
+    hsla(48, 20%, 90%, 1) 45%,
+    hsla(48, 20%, 90%, 1) 55%,
+    transparent 0
+  );
+  background-size: 0.02em 0.05em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shad-anim 15s linear infinite;
+}
+
+@keyframes shad-anim {
+  0% {
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 100% -100%;
+  }
+}
+
 #timeline-content {
-  margin-top: 30vh;
   text-align: center;
 }
 /* Timeline */
@@ -115,7 +162,7 @@ h1 {
   list-style: none;
   text-align: left;
   font-weight: 100;
-  max-width: 30%;
+  max-width: 50%;
 }
 .timeline h1 {
   font-family: 'Saira', sans-serif;
