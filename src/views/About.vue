@@ -12,12 +12,15 @@
               />
       </div>
       <div class="col-md-6 abt_para1 text-center">
-        <p class="fir_para"> I am a South African freelance full stack developer. I am passionate about creating and maintaining websites, I have all the experience needed to create a responsive website. 
-        I've spent 2 years in the coding industry, I found my passion through working with the coding language HTML and today i can say that I have learnt much more and I find coding much more intriguing, 
-        everyday is something new to learn. All that I am and all I can do was all through practice.</p>
-        <p class="sec_para">Since I've been coding I always lived up to this specific words of Steve Jobs, 
-          <i>"People think focus means saying yes to the thing you've got to focus on. 
-        It means saying no to the hundred other good ideas that there are. You have to pick carefully."</i></p>
+        <p class="fir_para">As a freelance full-stack developer based in South Africa, I possess a passion 
+          for creating and maintaining websites, backed by extensive experience in the field. Over the 
+          course of two years, I have honed my skills in coding, with HTML serving as my gateway to the 
+          coding world. Since then, my interest in coding has only deepened, and I have continued to 
+          acquire new knowledge and skills on a daily basis through practice and dedication.</p>
+        <p class="sec_para">Throughout my coding journey, I have adopted a philosophy that aligns 
+          with the wise words of Steve Jobs, namely that true focus requires saying "no" to many good 
+          ideas and carefully selecting the most relevant and impactful areas of focus. I am committed 
+          to delivering high-quality results and providing excellent service to my clients.</p>
       </div>
       <!-- <div class="abt_para1">
         Since I've been coding I always lived up to this specific words of Steve Jobs, <i>"People think focus means saying yes to the thing you've got to focus on. 
