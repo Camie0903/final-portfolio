@@ -41,7 +41,7 @@ export default {
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 
-.res_head {
+/* .res_head {
   margin-top: -13%;
   font-size: 2rem;
   letter-spacing: 3px;
@@ -53,9 +53,9 @@ export default {
   line-height: 0.9em;
   outline: none;
   animation: animate 6000000s linear infinite;
-}
+} */
 
-@keyframes animate {
+/* @keyframes animate {
   100% {
     color: #2c3e50;
     text-shadow: none;
@@ -65,7 +65,7 @@ export default {
     text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
       0 0 80px #03BCF4, 0 0 160px #03BCF4;
   }
-}
+} */
 
 body {
   background: #252827;
@@ -108,17 +108,18 @@ h1 {
   font-family: "Righteous", serif;
   font-size: 5.5rem;
   text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
-  margin-left: 26%;
+
   position: relative;
 }
 
-h1:after {
-  position: relative;
+/* h1:after {
+  position: absolute;
   content: attr(data-shadow);
   top: 0.02em;
   left: 0.1em;
   z-index: -1;
   text-shadow: none;
+  
   background-image: linear-gradient(
     45deg,
     transparent 45%,
@@ -131,7 +132,7 @@ h1:after {
   -webkit-text-fill-color: transparent;
 
   animation: shad-anim 15s linear infinite;
-}
+} */
 
 @keyframes shad-anim {
   0% {

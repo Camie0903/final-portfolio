@@ -1,18 +1,7 @@
 <template>
 
-    <!-- <h1 class="heading" data-attr-text="Skills">Skills</h1> -->
-    <div class="patterns">
-  <svg width="40%" height="40%">
-
-              
-     
+    <h1 class="heading" data-attr-text="Skills">Skills</h1>
     
-   
- <text x="45%" y="45%"  text-anchor="middle"  >
-   Skills
- </text>
- </svg>
-</div>
 
 <div class="row">
 
@@ -136,6 +125,18 @@ export default {
  
 }
 } */
+
+h1 {
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: 400;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 5.5rem;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+
+  position: relative;
+}
 body{
   margin: 0;
   color: #fff;
@@ -149,7 +150,7 @@ body{
 
 
 
-svg text {
+/* svg text {
   font-family: Lora;
   letter-spacing: 10px;
   stroke: #ffa5d8;
@@ -175,65 +176,7 @@ svg text {
     fill: hsla(189, 68%, 75%,0%)
   }
   
-}
-.heading {
-  color: #fff;    
-  display: flex;
-    align-items: center;
-    justify-content: center;
-  z-index: 1;
-  margin: 0;
-  font-family: emilys-candy, san-serif;
-  font-size: 5.5rem;
-  font-weight: 100;
-  top: -50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-left: 50%;
-    margin-top: 7%;
-}
-
-.heading::before,
-.heading::after {
-  content: attr(data-attr-text);
-  position: absolute;
-  width: 100%;
-  padding: 154px -1rem;
-  z-index: -1;
-  top:0;
-  left: 0;
-}
-
-
-/* Back layer */
-.heading::before {
-  animation: textGhostingBefore 4s ease-out infinite alternate;
-}
-@keyframes textGhostingBefore {
-  0%   {text-shadow: -0.5em -0.5em  0.5em   hsla(0, 0%, 100%, 0.25);}
-  50%  {text-shadow:  0     -0.25em 0.125em hsla(0, 0%, 100%, 0.5);}
-  100% {text-shadow:  0.5em -0.5em  0.5em   hsla(0, 0%, 100%, 0.25);}
-}
-
-/* Middle layer */
-.heading::after {
-  animation: textGhostingAfter 4s ease-in infinite alternate;
-}
-@keyframes textGhostingAfter {
-  0%   {text-shadow: -0.25em -0.25em  0.25em  hsla(0, 0%, 100%, 0.5);}
-  50%  {text-shadow:  0      -0.125em 0.125em hsla(0, 0%, 100%, 0.25);}
-  100% {text-shadow:  0.25em -0.25em  0.25em  hsla(0, 0%, 100%, 0.5);}
-}
-
-/* Front layer */
-.heading {
-  animation: textGhosting 3s ease-in-out infinite alternate;
-}
-@keyframes textGhosting {
-  0%   {color: #fff; text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4, 0 0 80px #03BCF4, 0 0 160px #03BCF4;}
-  50%  {color: #9b59b6; text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 40px #9b59b6, 0 0 80px #9b59b6, 0 0 160px #9b59b6;}
-  100% {color: #2c3e50; text-shadow: none;}
-}
+} */
 
 #skills_cont{
     display:flex;

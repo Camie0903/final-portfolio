@@ -1,12 +1,6 @@
 <template>
 
-    <div class="patterns">
-  <svg width="100%" height="100%">  
- <text x="50%" y="70%"  text-anchor="middle"  >
-   About Me
- </text>
- </svg>
-  </div>
+<h1 class="heading" data-attr-text="About Me">About Me</h1>
   
   <div class="whole_content row mb-5">
     <div class="column row d-flex">
@@ -106,6 +100,17 @@ animation: animate 6000000s linear infinite;
     0 0 80px #03BCF4, 0 0 160px #03BCF4;
 }
 } */
+h1 {
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: 400;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 5.5rem;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+
+  position: relative;
+}
 #ap{
 background-color: black;
    width: 470px;
@@ -142,5 +147,63 @@ i:hover {
   border-radius: 10px;
   padding: 10px;
   transition: ease;
-}    
+}   
+
+@media only screen and (max-width: 1179px) {
+  .whole_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .img_abt {
+    margin-bottom: 2rem;
+  }
+  .abt_para1 {
+    margin-top: 2rem;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .whole_content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .patterns {
+      padding-top: 2rem;
+      padding-left: 2rem;
+    }
+    svg text {
+      font-size: 80px;
+      letter-spacing: 5px;
+    }
+    #ap {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      float: none;
+    }
+    .abt_para1 {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Styles for screens smaller than 576px (mobile devices) */
+  @media only screen and (max-width: 576px) {
+    .patterns {
+      padding-left: 1rem;
+    }
+    svg text {
+      font-size: 60px;
+      letter-spacing: 3px;
+    }
+    .fir_para, .sec_para {
+      font-size: 16px;
+    }
+  }
 </style>

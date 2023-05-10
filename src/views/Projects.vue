@@ -2,9 +2,7 @@
 <div id="cardz">
 <div id="pro">
   <div class="pro_head">
-    <h1 class="testimonials-heading">
-        Projects
-    </h1>
+    <h1 class="heading" data-attr-text="Projects">Projects</h1>
   </div>  
     <div class="flip-card" v-for="proj in projects"
           :key="proj.id">
@@ -108,21 +106,24 @@ export default {
 
 
 </script>
-<style>
+<style scoped>
+
+h1 {
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: 400;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 5.5rem;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+
+  position: relative;
+}
+
 .pro_head{
   margin-top: -11%;
-   font-size: 2rem;
-  letter-spacing: 3px;
-  color: #2c3e50;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
-  line-height: 0.9em;
-  outline: none;
-  animation: animate 6000000s linear infinite;
-}
-@keyframes animate {
+   }
+/* @keyframes animate {
   100% {
     color: #2c3e50;
     text-shadow: none;
@@ -133,7 +134,7 @@ export default {
       0 0 80px #03BCF4, 0 0 160px #03BCF4;
  
 }
-}
+} */
 #cardz{
     display: flex;
     flex-wrap: wrap;

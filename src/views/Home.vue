@@ -22,6 +22,39 @@
 </template>
 
 <style scoped>
+
+  /* desktop styles */
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .box {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  /* tablet styles */
+  @media (max-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+    .box {
+      padding: 15px;
+    }
+  }
+
+  /* cellphone styles */
+  @media (max-width: 480px) {
+    .container {
+      max-width: 480px;
+    }
+    .box {
+      padding: 10px;
+    }
+  }
+
 #content{
   position: relative;
   z-index: 4;

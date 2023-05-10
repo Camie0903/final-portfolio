@@ -1,6 +1,6 @@
 <template>
 <div class="he">
-  <h1>Testimonials</h1>
+  <h1 class="heading" data-attr-text="Testimonials">Testimonials</h1>
 </div>
   <div class="items">
     <div class="entry" v-for="t of testimonials" :key="t.id">
@@ -70,38 +70,22 @@ export default {
 
 </script>
 <style scoped>
+h1 {
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: 400;
+  color: white;
+  font-family: "Righteous", serif;
+  font-size: 5.5rem;
+  text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
+  text-align: center;
+  margin: 1.0em;
+  margin-top: -10%;
+  position: relative;
+}
 .he{
  margin-top: 20vh;
-  position: relative;
-  z-index: 100;
-   font-size: 2rem;
-  letter-spacing: 3px;
-  color: #2c3e50;
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  -webkit-box-reflect: below 0.5px linear-gradient(transparent, #0008);
-  line-height: 0.9em;
-  outline: none;
-  animation: animate 6000000s linear infinite;
-}
-@keyframes animate {
-  100% {
-    color: #2c3e50;
-    text-shadow: none;
-  }
-  0% {
-    color: #fff;
-    text-shadow: 0 0 10px #03BCF4, 0 0 20px #03BCF4, 0 0 40px #03BCF4,
-      0 0 80px #03BCF4, 0 0 160px #03BCF4;
- 
-}
-}
-    h1 {
-  text-align: center;
-  margin: 1.5em;
-  margin-top: -10%;
-}
+ }
 
 img {
   width: 50%;
@@ -210,5 +194,34 @@ img {
     rgba(255, 255, 255, 0) 100%
   );
 }
+/* Add this media query for screens with a maximum width of 768px (tablet size) */
+@media screen and (max-width: 768px) {
+  /* Move the carousel up */
+  .carousel {
+    transform: translateY(-50%);
+    top: 50%;
+  }
+  
+  /* Adjust the width of the carousel item */
+  .carousel-item {
+    width: 100%;
+  }
+  
+  /* Hide the carousel controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+/* Add this media query for screens with a maximum width of 576px (mobile size) */
+@media screen and (max-width: 576px) {
+  /* Move the carousel up further */
+  .carousel {
+    transform: translateY(-75%);
+    top: 50%;
+  }
+}
+
 
 </style>
