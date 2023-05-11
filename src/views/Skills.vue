@@ -132,6 +132,8 @@ body{
     display:flex;
     flex-wrap: wrap;
     gap: 2rem;
+    align-content: center;
+    justify-content: center;
 }
 .i1{
     margin:5%;
@@ -149,6 +151,12 @@ body{
     margin:5%;
 }
 .i6{
+    margin:5%;
+}
+.i7{
+    margin:5%;
+}
+.i8{
     margin:5%;
 }
 .details{
@@ -229,8 +237,8 @@ body{
         width: 2%;
     }
 }
-@media (max-width: 480px) {
-  .whole_content{
+@media (max-width: 999px) {
+  .heading{
     padding-top: 5rem;
   }
   
