@@ -1,7 +1,7 @@
 <template>
     <div class="contact-box">
     <div class="contact-links">
-      <h2>CONTACT</h2>
+      <h2>CONTACT ME...</h2>
       <div class="links">
         <div class="link">
           <a href="https://www.linkedin.com/in/cameron-tamboer-729b7a239/" target="_blank"><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin"></a>
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="contact-form-wrapper">
+    <!-- <div class="contact-form-wrapper">
       <form>
         <div class="form-item">
           <input type="text" name="sender" required>
@@ -36,7 +36,7 @@
         </div>
         <button class="submit-btn">Send</button>  
       </form>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -71,7 +71,8 @@ body {
   margin-top: 30vh;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15%;
+  margin-left: 34%;
+    padding-top: 8rem;
 }
 
 .contact-links, .contact-form-wrapper {
@@ -258,5 +259,16 @@ textarea:valid+label {
     height: 38px;
   }
 }
-
+@media (max-width: 992px) {
+  .contact-box{
+    width:100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5rem;
+    margin-top: 11rem;
+    margin-left: 3rem;
+  }
+}
 </style>
