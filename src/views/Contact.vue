@@ -15,6 +15,9 @@
         <div class="link">
           <a href="https://mail.google.com/mail/u/1/#inbox" target="_blank"><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
         </div>
+        <div class="link whatsapp_link">
+          <a href="https://wa.me/+27677051854?text=Hey%20there!%20Just%20checking%20out%20your%20web%20developer%20portfolio%20and%20I'm%20really%20impressed%20with%20your%20work.%20Your%20designs%20are%20sleek%20and%20your%20code%20is%20clean.%20Would%20love%20to%20chat%20more%20about%20your%20process%20and%20experience.%20Let%20me%20know%20when%20you're%20free%20to%20chat!" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #638ed9;"></i></a>
+        </div>
       </div>
     </div>
     <div class="contact-form-wrapper">
@@ -56,9 +59,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.whatsapp_link{
+  padding-top: 0.5rem;
+    /* gap: 1rem; */
+    padding-left: 0.5rem;
+}
 .contact-box {
-  width: clamp(100px, 90%, 1000px);
+  /* width: clamp(100px, 90%, 1000px); */
+  width: 64%;
   margin: 80px 50px;
   margin-top: 30vh;
   display: flex;
