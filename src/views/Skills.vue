@@ -1,9 +1,9 @@
 <template>
 
-    <h1 class="heading" data-attr-text="Skills">Skills</h1>
     
-
-<div class="row">
+    
+    <div class="row whole_content">
+    <h1 class="heading" data-attr-text="Skills">Skills</h1>
 
     <div id="skills_cont" class="row mb-5">
         <div id="skills_icons" class="col-md-6">
@@ -283,5 +283,11 @@ body{
     100%{
         width: 2%;
     }
+}
+@media (max-width: 480px) {
+  .whole_content{
+    padding-top: 5rem;
+  }
+  
 }
 </style>

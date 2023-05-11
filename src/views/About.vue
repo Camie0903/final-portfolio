@@ -1,8 +1,8 @@
 <template>
 
-<h1 class="heading" data-attr-text="About Me">About Me</h1>
   
   <div class="whole_content row mb-5">
+    <h1 class="heading" data-attr-text="About Me">About Me</h1>
     <div class="column row d-flex">
       <div class="col-md-6 img_abt d-flex justify-content-center">
         <img
@@ -38,8 +38,8 @@ export default {
      @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
 
 .whole_content{
-  padding-left: 14rem;
-    padding-right: 2rem;
+  /* padding-left: 14rem;
+    padding-right: 2rem; */
 }
 .patterns{
   padding-top: 5rem;
@@ -152,17 +152,16 @@ i:hover {
   transition: ease;
 }   
 
-@media only screen and (max-width: 1179px) {
+@media  (max-width: 1180px) {
   .whole_content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
   }
-  .column {
+  /* .column {
     flex-direction: column;
-  }
+  } */
   .img_abt {
     margin-bottom: 2rem;
   }
@@ -171,6 +170,12 @@ i:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .whole_content{
+    padding-top: 5rem;
+  }
+  
+}
 
 @media only screen and (max-width: 768px) {
     .whole_content {

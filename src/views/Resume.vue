@@ -1,5 +1,5 @@
 <template>
-    <div id="timeline-content">
+    <div id="timeline-content whole_content">
   <div class>
     <h1 data-shadow='Resume'>Resume</h1>
   </div>
@@ -108,7 +108,7 @@ h1 {
   font-family: "Righteous", serif;
   font-size: 5.5rem;
   text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
-
+  padding-top: 5rem;
   position: relative;
 }
 
@@ -214,6 +214,12 @@ h1 {
   width: 11px;
   content: "";
   top: 5px;
+}
+@media (min-width: 992px) {
+  h1{
+    padding-top: 0;
+  }
+  
 }
 
 </style>

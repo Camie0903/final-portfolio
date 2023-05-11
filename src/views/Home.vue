@@ -12,8 +12,8 @@
       <div id="about">
         <h1>
           <div class="heading1" style="float:initial; margin-top:14rem; color: #fff;">
-            <h2><span ref="text1Container"></span></h2>
-            <h2><span ref="textContainer"></span></h2>
+            <h2 class="typing_texts"><span ref="text1Container"></span></h2>
+            <h2 class="typing_texts"><span ref="textContainer"></span></h2>
           </div>
         </h1>
       </div>
@@ -52,6 +52,9 @@
     }
     .box {
       padding: 10px;
+    }
+    .heading1{
+      padding-top: 12rem;
     }
   }
 

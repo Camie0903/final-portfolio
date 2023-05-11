@@ -1,12 +1,18 @@
 <template>
-<div class="he">
-  <h1 class="heading" data-attr-text="Testimonials">Testimonials</h1>
-</div>
-  <div class="items">
-    <div class="entry" v-for="t of testimonials" :key="t.id">
-      <p class="name">{{t.name}}</p>
-      <img :src="t.imgUrl" />
-      <p class="quote">"{{t.testi}}"</p>
+  <div class="he">
+    <h1 class="heading" data-attr-text="Testimonials">Testimonials</h1>
+  </div>
+  <div class="container">
+    <div class="items">
+      <div class="entry" v-for="t of testimonials" :key="t.id">
+        <p class="name">{{t.name}}</p>
+        <img :src="t.imgUrl" />
+        <p class="quote">"{{t.testi}}"</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="prev" @click="prevTestimonial">&#8249;</button>
+      <button class="next" @click="nextTestimonial">&#8250;</button>
     </div>
   </div>
 </template>
@@ -63,13 +69,61 @@ export default {
             name: "Hilmi Mallick",
             testi:"Cameron is a very hardworking and disciplined young women who always strives to improve herself and those around her."
         } ,
-]
-      }
+        ],
+      currentTestimonialIndex: 0
+    };
+  },
+  methods: {
+    prevTestimonial() {
+      this.currentTestimonialIndex =
+        (this.currentTestimonialIndex - 1 + this.testimonials.length) %
+        this.testimonials.length;
+    },
+    nextTestimonial() {
+      this.currentTestimonialIndex =
+        (this.currentTestimonialIndex + 1) % this.testimonials.length;
     }
-}
+  }
+};
 
 </script>
 <style scoped>
+.container {
+    position: relative;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 80s infinite alternate linear;
+  }
+
+  .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .prev,
+  .next {
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: #666;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .items {
+      animation: none;
+    }
+  }
 h1 {
   letter-spacing: 1.5px;
   color: white;
@@ -134,11 +188,15 @@ img {
     }
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 750px) {
   .items {
     /* animation: none; */
     animation: carouselAnim2 100s infinite alternate linear;
     flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 0;
   }
   @keyframes carouselAnim2 {
     from {

@@ -212,4 +212,15 @@ h1 {
  font-size: small;
  margin-top: 5%;
 }
+@media (max-width: 1022px) {
+  .flip-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .pro_head{
+    padding:0;
+  }
+}
 </style>
