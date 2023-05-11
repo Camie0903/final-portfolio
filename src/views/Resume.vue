@@ -5,27 +5,29 @@
   </div>
   <ul class="timeline">
     <li class="event" data-date="2015-2020">
+      <h5 class="dates">2015-2020</h5>
       <h3>Voortrekker High School</h3>
       <p>I matriculated at Voortrekker High in Kenilworth, and that was where I found my passion for Web Development.</p>
     </li>
     <li class="event" data-date="2021">
+      <h5 class="dates">2021</h5>
       <h3>CartRun</h3>
       <p>I was an instore shopper for people that couldn't make it to go to shops during COVID19.</p>    
     </li> 
      <li class="event" data-date="2021">
-      
+      <h5 class="dates">2021</h5>
       <h3>CTU Training Solutions</h3>
       
       <p>At CTU Training Solutions I studied Information Systems for a year. </p>
     </li> 
     <li class="event" data-date="2022">
-      
+      <h5 class="dates">2022</h5>
       <h3>Life Choices Academy</h3>
       
       <p>At Life Choices I found my strengths and weaknesses in coding, and today I can say it was a very wise and good choice to study at Life Choices.</p>
     </li>
     <li class="event" data-date="Oct 22-Apr 23">
-      
+      <h5 class="dates">Oct 22-Apr 23</h5>
       <h3>Webwiser</h3>
       
       <p> At WebWiser, a reputable web development company, I had the opportunity to work as a Junior Web Developer on several high-profile projects for well-known brands such as Crocs, Under Armour, and Birkenstock. My role involved working closely with senior developers to create responsive and visually appealing websites that met the clients' requirements.</p>
@@ -95,7 +97,9 @@ a:hover {
   background: #004ffc;
   border-bottom: 0.35em solid black;
 }
-
+.dates{
+  font-size: 0.5rem;
+}
 strong {
   font-weight: 600;
 }
@@ -231,12 +235,16 @@ h1 {
     font-weight: 900;
     font-size: 9px;
     padding-left: 4rem;
-    box-shadow: none;
+    box-shadow: none;  
+    top: -3rem;
+    margin-left: -8rem;
   }
   .event {
     margin-bottom: 2rem;
     font-weight: 900;
     font-size: 9px;
+    left: 9rem;
+    top: 0rem;
   }
   .timeline .event:after{
     box-shadow: none;
