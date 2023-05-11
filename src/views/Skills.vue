@@ -8,88 +8,33 @@
     <div id="skills_cont" class="row mb-5">
         <div id="skills_icons" class="col-md-6">
             <div class="i1">
-                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-html5 fa-beat-fade" style="color: #ffffff;"></i>
                 
             </div>
             <div class="i2">
-                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-css3-alt fa-beat-fade" style="color: #ffffff;"></i>
             </div>
             <div class="i3">
-                <i class="fa-brands fa-bootstrap"></i>
+                <i class="fa-brands fa-bootstrap fa-beat-fade" style="color: #ffffff;"></i>
             </div>
             <div class="i4">
-                <i class="fa-brands fa-js-square"></i>
+                <i class="fa-brands fa-js-square fa-beat-fade" style="color: #ffffff;"></i>
             </div>
             <div class="i5">
-                <i class="fa-brands fa-vuejs"></i>
+                <i class="fa-brands fa-vuejs fa-beat-fade" style="color: #ffffff;"></i>
             </div>
             <div class="i6">
-                <i class="fa-brands fa-node-js"></i>
+                <i class="fa-brands fa-node-js fa-beat-fade" style="color: #ffffff;"></i>
+            </div>
+            <div class="i7">
+                <i class="fa-brands fa-react fa-beat-fade" style="color: #ffffff;"></i>
+            </div>
+            <div class="i8">
+                <i class="fa-brands fa-shopify fa-beat-fade" style="color: #ffffff;"></i>
             </div>
         </div>
-    <!-- Skills Bar -->
-        <div id="skill_bar" class="col-md-6">
-            <div class="skills">
-                <div class="details">
-                    <span>HTMLs</span>
-                    <span>90%</span>
-                </div>
-                <div class="bar">
-                <div id="html-bar"></div>
-                </div>
-            </div>
-    
-            <div class="skills">
-                <div class="details">
-                    <span>CSS</span>
-                    <span>80%</span>
-                </div>
-                <div class="bar">
-                <div id="css-bar"></div>
-                </div>
-            </div>
-    
-            <div class="skills">
-                <div class="details">
-                    <span>BOOTSTRAP</span>
-                    <span>75%</span>
-                </div>
-                <div class="bar">
-                <div id="bootstrap-bar"></div>
-                </div>
-            </div>
-    
-            <div class="skills">
-                <div class="details">
-                    <span>JS</span>
-                    <span>78%</span>
-                </div>
-                <div class="bar">
-                <div id="js-bar"></div>
-                </div>
-            </div>
-    
-            <div class="skills">
-                <div class="details">
-                    <span>VUE</span>
-                    <span>20%</span>
-                </div>
-                <div class="bar">
-                <div id="vue-bar"></div>
-                </div>
-            </div>
-    
-            <div class="skills">
-                <div class="details">
-                    <span>NODE</span>
-                    <span>2%</span>
-                </div>
-                <div class="bar">
-                <div id="node-bar"></div>
-                </div>
-            </div>
-    
-        </div>
+ 
+       
 </div>
 </div>    
 </template>
