@@ -13,6 +13,7 @@
           <a href="https://app.netlify.com/teams/camie0903/overview" target="_blank"><img src="https://i.postimg.cc/v82N8XfN/netlify-logo-png-transparent.png" alt="netlify"></a>
         </div>
         <div class="link">
+          
           <a href="mailto:camerontamboer03@gmail.com" target="_blank"><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email"></a>
         </div>
         <div class="link whatsapp_link">
