@@ -221,5 +221,28 @@ h1 {
   }
   
 }
+@media screen and (max-width: 710px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 18rem;
+        grid-gap: 1rem;
+    border: none;
+    background: none;
+    font-weight: 900;
+    font-size: 9px;
+    padding-left: 4rem;
+    box-shadow: none;
+  }
+  .event {
+    margin-bottom: 2rem;
+    font-weight: 900;
+    font-size: 9px;
+  }
+  .timeline .event:after{
+    box-shadow: none;
+    background: none;
+  }
+}
+
 
 </style>
