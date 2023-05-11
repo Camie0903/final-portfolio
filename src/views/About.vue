@@ -21,6 +21,7 @@
           with the wise words of Steve Jobs, namely that true focus requires saying "no" to many good 
           ideas and carefully selecting the most relevant and impactful areas of focus. I am committed 
           to delivering high-quality results and providing excellent service to my clients.</p>
+        <p class="third_para font-weight-bold">TechStack: HTML5, CSS, Node.js, Vue.js, Bootstrap, MySQL, JavaScript, TypeScript, Shopify, Tailwind CSS, React.js, Liquid and Vercel</p>
       </div>
       <!-- <div class="abt_para1">
         Since I've been coding I always lived up to this specific words of Steve Jobs, <i>"People think focus means saying yes to the thing you've got to focus on. 
@@ -126,6 +127,10 @@ background-color: black;
 }
 .sec_para{
 margin-top:5%;
+}
+.third_para{
+margin-top:5%;
+font-weight: 600;
 }
 .abt_para1{
 
