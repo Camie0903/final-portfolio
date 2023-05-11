@@ -157,12 +157,14 @@ h1 {
     background-color: transparent;
     width: 300px;
     height: 300px;
-    perspective: 1000px;
+    /* perspective: 1000px; */
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     border-radius: 50%;
-    float: left;
+    float:left;
     margin:2%;
+    padding-left: 6rem;;
   /* flex-wrap: wrap; */
 }
 
@@ -221,6 +223,11 @@ h1 {
   }
   .pro_head{
     padding:0;
+  }
+}
+@media (max-width:497px) {
+  .flip-card{
+    padding-left: 5rem;
   }
 }
 </style>

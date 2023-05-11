@@ -2,7 +2,7 @@
   <div class="he">
     <h1 class="heading" data-attr-text="Testimonials">Testimonials</h1>
   </div>
-  <div class="container">
+  <div class="overflow-hidden container" >
     <div class="items">
       <div class="entry" v-for="t of testimonials" :key="t.id">
         <p class="name">{{t.name}}</p>
@@ -10,10 +10,10 @@
         <p class="quote">"{{t.testi}}"</p>
       </div>
     </div>
-    <div class="controls">
+    <!-- <div class="controls">
       <button class="prev" @click="prevTestimonial">&#8249;</button>
       <button class="next" @click="nextTestimonial">&#8250;</button>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>
@@ -63,12 +63,12 @@ export default {
             name: "Jesse Spence",
             testi:"Cameron is a reliable work colleague to have, you can always count on her to complete what is needed. This along with her great energy and easy going personality makes her an absolute asset to have in any work environment."
         },
-        {
-            id: 8,
-            imgUrl:"https://i.postimg.cc/qRVvDyJ9/Hilmi-1.jpg",
-            name: "Hilmi Mallick",
-            testi:"Cameron is a very hardworking and disciplined young women who always strives to improve herself and those around her."
-        } ,
+        // {
+        //     id: 8,
+        //     imgUrl:"https://i.postimg.cc/qRVvDyJ9/Hilmi-1.jpg",
+        //     name: "Hilmi Mallick",
+        //     testi:"Cameron is a very hardworking and disciplined young women who always strives to improve herself and those around her."
+        // } ,
         ],
       currentTestimonialIndex: 0
     };
@@ -88,14 +88,19 @@ export default {
 
 </script>
 <style scoped>
-.container {
+/* body{
+  overflow: hidden;
+} */
+/* .container {
     position: relative;
-  }
+    
+  } */
 
   .items {
     display: flex;
     align-items: center;
     width: fit-content;
+    overflow:visible;
     animation: carouselAnim 80s infinite alternate linear;
   }
 
@@ -130,10 +135,10 @@ h1 {
   font-weight: 400;
   color: white;
   font-family: "Righteous", serif;
-  font-size: 5.5rem;
+  font-size: 4.4rem;
   text-shadow: 0.03em 0.03em 0 hsla(230, 40%, 50%, 1);
   text-align: center;
-  margin: 1.0em;
+
   margin-top: -10%;
   position: relative;
 }
@@ -195,7 +200,7 @@ img {
     flex-direction: column;
     display: flex;
     justify-content: center;
-    padding-left: 5rem;
+    padding-left: 2rem;
     padding-right: 0;
   }
   @keyframes carouselAnim2 {
@@ -227,7 +232,6 @@ img {
 
 .container .faders {
   width: 100%;
-  position: absolute;
   height: 100%;
 }
 

@@ -1,46 +1,58 @@
- <template>
-    <nav class="navbar navbar-expand-lg navbar-light ">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="/">Cameron</a>
-        <button
-          class="navbar-toggler "
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class=" "><i class="fa-solid fa-bars-staggered" style="color: #ffffff;"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <router-link to="/" class="nav-link text-white">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/about" class="nav-link text-white">About</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/skills" class="nav-link text-white">Skills</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/resume" class="nav-link text-white">Resume</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/projects" class="nav-link text-white">Projects</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/testimonials" class="nav-link text-white">Testimonials</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/contact" class="nav-link text-white">Contact</router-link>
-            </li>
-          </ul>
-        </div>
+<template>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="/">Cameron</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        @click="isNavOpen = !isNavOpen"
+      >
+        <span class=""><i class="fa-solid fa-bars-staggered" style="color: #ffffff;"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link text-white" @click="isNavOpen = false">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link text-white" @click="isNavOpen = false">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/skills" class="nav-link text-white" @click="isNavOpen = false">Skills</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/resume" class="nav-link text-white" @click="isNavOpen = false">Resume</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/projects" class="nav-link text-white" @click="isNavOpen = false">Projects</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/testimonials" class="nav-link text-white" @click="isNavOpen = false">Testimonials</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact" class="nav-link text-white" @click="isNavOpen = false">Contact</router-link>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </template>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isNavOpen: false,
+    };
+  },
+};
+</script>
+
   
   <style scoped>
   
