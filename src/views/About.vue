@@ -132,7 +132,22 @@ h2 {
  float: left;
  padding-left: 6rem;
 }
-
+@media (max-width:729px) {
+  .links{
+    padding-left: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .abt_para1{
+    padding-top:2rem;
+  }
+}
+@media (max-width:964px) {
+  .heading{
+    padding-top: 5rem;
+  }
+  
+}
 .link {
   margin: 10px;
   cursor: pointer;
@@ -364,6 +379,7 @@ margin-top: 6%;
 
 /* float: right; */
 }
+
 /* .abt_para2{
  display: flex;
 flex-wrap: wrap;
