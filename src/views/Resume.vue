@@ -251,6 +251,25 @@ h1 {
     background: none;
   }
 }
+@media (min-width: 730px) {
+  .dates{
+    display: none;
+  }
+  
+}
+@media (max-width: 711px) {
+  .timeline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin-left: 8%;
 
+  }
+  .dates{
+    display: none;
+  }
+}
 
 </style>

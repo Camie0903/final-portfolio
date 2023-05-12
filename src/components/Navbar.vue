@@ -34,9 +34,7 @@
           <li class="nav-item">
             <router-link to="/testimonials" class="nav-link text-white" @click="isNavOpen = false">Testimonials</router-link>
           </li>
-          <li class="nav-item">
-            <router-link to="/contact" class="nav-link text-white" @click="isNavOpen = false">Contact</router-link>
-          </li>
+         
         </ul>
       </div>
     </div>

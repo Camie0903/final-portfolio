@@ -11,6 +11,7 @@
                 src="https://i.postimg.cc/PJm8KQZF/Cameron-1.jpg"
               />
       </div>
+     
       <div class="col-md-6 abt_para1 text-center">
         <p class="fir_para">As a freelance full-stack developer based in South Africa, I possess a passion 
           for creating and maintaining websites, backed by extensive experience in the field. Over the 
@@ -23,10 +24,28 @@
           to delivering high-quality results and providing excellent service to my clients.</p>
         <p class="third_para font-weight-bold">TechStack: HTML5, CSS, Node.js, Vue.js, Bootstrap, MySQL, JavaScript, TypeScript, Shopify, Tailwind CSS, React.js, Liquid and Vercel</p>
       </div>
+      <div class="links">
+        <div class="link">
+          <a href="https://www.linkedin.com/in/cameron-tamboer-729b7a239/" target="_blank"><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" class="contact_images" alt="linkedin"></a>
+        </div>
+        <div class="link">
+          <a href="https://github.com/Camie0903" target="_blank"><img src="https://i.postimg.cc/YCV2QBJg/github.png" class="contact_images" alt="github"></a>
+        </div>
+        <div class="link">
+          <a href="https://app.netlify.com/teams/camie0903/overview" target="_blank"><img src="https://i.postimg.cc/v82N8XfN/netlify-logo-png-transparent.png" class="contact_images" alt="netlify"></a>
+        </div>
+        <div class="link">
+          <a href="mailto:camerontamboer03@gmail.com" target="_blank"><img src="https://i.postimg.cc/NjLfyjPB/email.png" class="contact_images" alt="email"></a>
+        </div>
+        <div class="link whatsapp_link">
+          <a href="https://wa.me/+27677051854?text=Hey%20there!%20Just%20checking%20out%20your%20web%20developer%20portfolio%20and%20I'm%20really%20impressed%20with%20your%20work.%20Your%20designs%20are%20sleek%20and%20your%20code%20is%20clean.%20Would%20love%20to%20chat%20more%20about%20your%20process%20and%20experience.%20Let%20me%20know%20when%20you're%20free%20to%20chat!" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #638ed9;"></i></a>
+        </div>
+      </div>
       <!-- <div class="abt_para1">
         Since I've been coding I always lived up to this specific words of Steve Jobs, <i>"People think focus means saying yes to the thing you've got to focus on. 
         It means saying no to the hundred other good ideas that there are. You have to pick carefully."</i>
       </div> -->
+     
     </div>
   </div>
 </template>
@@ -37,7 +56,209 @@ export default {
 </script>
 <style scoped>
      @import url("https://fonts.googleapis.com/css?  family=Lora:400,400i,700,700i");
+     #contact {
+/*   background-color: #2c3e50; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whatsapp_link{
+  padding-top: 0.5rem;
+    /* gap: 1rem; */
+    padding-left: 0.5rem;
+}
+.contact-box {
+  /* width: clamp(100px, 90%, 1000px); */
+  width: 64%;
+  margin: 80px 50px;
+  margin-top: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 34%;
+    padding-top: 8rem;
+}
 
+.contact-links, .contact-form-wrapper {
+  width: 50%;
+  padding: 8% 5% 10% 5%;
+}
+
+
+
+
+.contact-form-wrapper {
+  background-color: #ffffff8f;
+  border-radius: 0 10px 10px 0;
+  margin-top: -15%;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-links, .contact-form-wrapper {
+    width: 100%;
+  }
+  
+  .contact-links {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .contact-form-wrapper {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact-box {
+    width: 95%;
+    margin: 8% 5%;
+  }
+}
+
+h2 {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+  font-size: clamp(30px, 6vw, 60px);
+  letter-spacing: 2px;
+  text-align: center;
+  transform: scale(.95, 1);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding-top: 50px; */
+  width: 470px;
+  height: 500px;
+  display: flex;
+ float: left;
+ padding-left: 6rem;
+}
+
+.link {
+  margin: 10px;
+  cursor: pointer;
+  
+}
+a{
+    background: transparent;
+}
+
+.contact_images {
+  width: 45px;
+  height: 45px;
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #0006);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.contact_images:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.contact_images:active {
+  transform: scale(1.1, 1.1);
+  filter: 
+    hue-rotate(220deg)
+    drop-shadow(2px 4px 4px #222)
+    sepia(0.3);
+}
+
+.form-item {
+  position: relative;
+}
+
+label, input, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+  color: #999;
+  font-size: clamp(14px, 1.5vw, 18px);
+  pointer-events: none;
+  user-select: none;
+}
+
+input, textarea {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: clamp(15px, 1.5vw, 18px);
+}
+
+input:focus+label, 
+input:valid+label, 
+textarea:focus+label, 
+textarea:valid+label {
+  font-size: clamp(13px, 1.3vw, 16px);
+  color: #777;
+  top: -20px;
+  transition: all .225s ease;
+}
+
+.submit-btn {
+  background-color: #fd917e;
+  filter: drop-shadow(2px 2px 3px #0003);
+  color: #fff;
+  font-family: "Poppins",sans-serif;
+  font-size: clamp(16px, 1.6vw, 18px);
+  display: block;
+  padding: 12px 20px;
+  margin: 2px auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.submit-btn:active {
+  transform: scale(1.1, 1.1);
+  filter: sepia(0.5);
+}
+
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: clamp(30px, 12vw, 60px);
+  }
+  
+  .links {
+    padding-top: 30px;
+  }
+  
+  .contact_images {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media (max-width: 992px) {
+  .contact-box{
+    width:100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5rem;
+    margin-top: 11rem;
+    margin-left: 3rem;
+  }
+}
 .whole_content{
   /* padding-left: 14rem;
     padding-right: 2rem; */
@@ -115,6 +336,7 @@ h1 {
 
   position: relative;
 }
+
 #ap{
 background-color: black;
    width: 470px;
