@@ -70,6 +70,8 @@
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
   display: inline-block; /* set display to inline-block */
+  padding-top: 1rem; /* add padding-top instead of margin-top */
+  padding-bottom: 1rem; /* add padding-bottom */
 }
 @keyframes move-background {
   from {
