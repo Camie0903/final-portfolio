@@ -65,7 +65,7 @@
 }
 .heading1 {
   z-index: 1;
-  margin-top: 14rem; 
+  margin-top: 28rem; 
   color: #fff;
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
