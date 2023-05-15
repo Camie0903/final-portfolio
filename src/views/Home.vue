@@ -12,8 +12,8 @@
       <div id="about">
         <h1>
           <div class="heading1" style="float:initial; margin-top:14rem; color: #fff;">
-            <h2 class="typing_texts"><span ref="text1Container"></span></h2>
-            <h2 class="typing_texts"><span ref="textContainer"></span></h2>
+            <span ref="text1Container"></span>
+            <span ref="textContainer"></span>
           </div>
         </h1>
       </div>
@@ -55,6 +55,7 @@
     }
     .heading1{
       padding-top: 12rem;
+      font-size: 2rem;
     }
   }
 
@@ -62,11 +63,13 @@
   position: relative;
   z-index: 4;
 }
-.heading1{
+.heading1 {
   z-index: 1;
-  float:initial; 
-  margin-top:14rem; 
-  color: #fff
+  margin-top: 14rem; 
+  color: #fff;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+  display: inline-block; /* set display to inline-block */
 }
 @keyframes move-background {
   from {
